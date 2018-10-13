@@ -5,7 +5,7 @@ class Book extends Component {
 
  
   render () {
-
+let showthumbnail= this.props.book.imageLinks ? this.props.book.imageLinks.thumbnail : '';
     
   	return (
     //displays book cover with the thumbnail, plus value options 
@@ -13,7 +13,7 @@ class Book extends Component {
     <div className="book">
      <div className="book-top">
       <div className="book-cover" style={{ width: 128, height: 193,
-        backgroundImage: `url(${this.props.book.imageLinks.thumbnail})` }}/>
+        backgroundImage: `url("${showthumbnail}")`}}></div>
       
      
     <div className="book-shelf-changer">
