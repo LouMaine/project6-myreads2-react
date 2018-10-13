@@ -37,7 +37,7 @@ console.log(this.props.books);
            <li key={book.id}>
            <Book book={book}
             changeShelf={this.props.changeShelf}
-            currentSelf='currentlyReading'/>
+            currentShelf='currentlyReading'/>
            </li>
            ))}
            </ol>
@@ -52,7 +52,7 @@ console.log(this.props.books);
              .map((book)=> (
              <li key={book.id}>
              <Book book={book}
-              changeSelf={this.props.changeShelf}     
+              changeShelf={this.props.changeShelf}     
               currentShelf='wantToRead'/>
              </li>
             ))}
@@ -68,21 +68,22 @@ console.log(this.props.books);
              .map((book) => (
              <li key={book.id}>
              <Book book={book}
-              changeSelf={this.props.changeShelf}     
+              changeShelf={this.props.changeShelf}     
               currentShelf='read'/>
              </li>
             ))}
            </ol>
           </div>
          </div>
-            
-                    
+         
         
       
      
          <div className="open-search">
-        <a onClick={() => this.setState({ showSearchPage: true })}>Add a book</a>
-         </div></div>
+        <Link to ="/search">Add a book</Link>
+         </div>
+      </div>
+    </div>
 );
 }
 }
